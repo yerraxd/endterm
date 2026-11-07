@@ -16,4 +16,8 @@ $(document).ready(function () {
     $("#seriesl").on("click", ".show-card", function () {
         $(this).find(".series-more").slideToggle(200);
     });
+
+    $("#how-to-use .section-title").on("click", function () {
+        $(this).next("ol").slideToggle(250);
+    });
 });

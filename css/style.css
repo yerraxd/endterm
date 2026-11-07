@@ -142,6 +142,11 @@ a:hover {
     display: none;
 }
 
+#how-to-use .section-title,
+.show-card {
+    cursor: pointer;
+}
+
 .artwork {
     display: block;
     width: 100%;
