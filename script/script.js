@@ -201,7 +201,7 @@ function renderSeries(list) {
           <div class="card-body">
             <h3>${serie.title}</h3>
             <p class="card-meta">${serie.genre} &bull; ${serie.year} &bull; <span class="star">&#9733;</span> ${serie.rating}</p>
-            <p>${serie.creator} &bull; Seasons: ${serie.seasons}</p>
+            <p class="series-more">${serie.creator} &bull; Seasons: ${serie.seasons}</p>
           </div>
         </article>
       </div>

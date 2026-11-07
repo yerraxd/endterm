@@ -12,4 +12,8 @@ $(document).ready(function () {
     $topBtn.on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 500);
     });
+
+    $("#seriesl").on("click", ".show-card", function () {
+        $(this).find(".series-more").slideToggle(200);
+    });
 });

@@ -138,6 +138,9 @@ a:hover {
     bottom: 24px;
     z-index: 1000;
 }
+.series-more {
+    display: none;
+}
 
 .artwork {
     display: block;
