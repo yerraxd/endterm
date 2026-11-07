@@ -257,3 +257,61 @@ document.addEventListener("DOMContentLoaded", function () {
     renderSeries(series);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contactForm");
+
+    if (!form) return;
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+    const success = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let valid = true;
+
+        success.hidden = true;
+
+        if (name.value.trim().length < 2) {
+            document.getElementById("nameError").textContent =
+                "Enter at least 2 characters.";
+            name.classList.add("is-invalid");
+            valid = false;
+        } else {
+            document.getElementById("nameError").textContent = "";
+            name.classList.remove("is-invalid");
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email.value.trim())) {
+            document.getElementById("emailError").textContent =
+                "Enter a valid email address.";
+            email.classList.add("is-invalid");
+            valid = false;
+        } else {
+            document.getElementById("emailError").textContent = "";
+            email.classList.remove("is-invalid");
+        }
+
+        if (message.value.trim().length < 10) {
+            document.getElementById("messageError").textContent =
+                "Message must contain at least 10 characters.";
+            message.classList.add("is-invalid");
+            valid = false;
+        } else {
+            document.getElementById("messageError").textContent = "";
+            message.classList.remove("is-invalid");
+        }
+
+        if (valid) {
+            success.hidden = false;
+            form.reset();
+        }
+    });
+
+});
