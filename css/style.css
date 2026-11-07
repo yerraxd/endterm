@@ -131,6 +131,13 @@ a:hover {
     color: var(--accent-dark);
     background-color: #e9d2a3;
 }
+#back-to-top {
+    display: none;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+}
 
 .artwork {
     display: block;
