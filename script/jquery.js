@@ -22,35 +22,18 @@ $(document).ready(function () {
     });
 });
 
+
 $(document).on("mouseenter", ".movie-card, .series-card, .show-card", function () {
-    $(this).stop(true).css("z-index", 10).animate(
-        { opacity: 0.99 },
-        {
-            duration: 200,
-            step: function (now) {
-                let scale = 1 + (1 - now) * 6;
-                $(this).css("transform", "scale(" + scale + ")");
-            }
-        }
-    );
+    $(this).css({
+        transition: "transform 0.2s ease",
+        transform: "scale(1.05)",
+        zIndex: 10
+    });
 });
 
 $(document).on("mouseleave", ".movie-card, .series-card, .show-card", function () {
-    $(this).stop(true).animate(
-        { opacity: 1 },
-        {
-            duration: 200,
-            step: function (now) {
-                let scale = 1 + (1 - now) * 6;
-                $(this).css("transform", "scale(" + scale + ")");
-            },
-            complete: function () {
-                $(this).css({
-                    transform: "",
-                    opacity: "",
-                    zIndex: ""
-                });
-            }
-        }
-    );
+    $(this).css({
+        transform: "scale(1)",
+        zIndex: 1
+    });
 });
