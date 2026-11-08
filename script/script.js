@@ -1,5 +1,7 @@
+// Stores ids of favorite movies (resets on page reload)
 let favorites = [];
 
+// Adds a movie to favorites, or removes it if it is already there
 function toggleFav(id) {
     if (favorites.includes(id)) {
         favorites = favorites.filter(function (item) {
@@ -50,6 +52,7 @@ function addFav() {
     });
 }
 
+// Returns a new array of movies whose title contains the search text
 function renderMovies(list) {
     const container = document.getElementById("moviestr");
     container.innerHTML = "";
@@ -100,6 +103,7 @@ function filterMovies(query) {
     });
 }
 
+// Returns a sorted copy of the list; slice() keeps the original array unchanged
 function sortMovies(list, order) {
     const sorted = list.slice();
 

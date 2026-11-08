@@ -1,6 +1,7 @@
 $(document).ready(function () {
     const $topBtn = $("#back-to-top");
 
+// Show the "back to top" button only after scrolling down 300px
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 300) {
             $topBtn.fadeIn(200);
