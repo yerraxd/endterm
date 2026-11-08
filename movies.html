@@ -42,9 +42,19 @@
 
     <section class="container section" id="trending-movies">
       <h2 class="section-title">Trending Movies</h2>
-      <div class="mb-4">
+      <div class="search-sort mb-4">
+        <div>
           <label class="form-label" for="search">Search</label>
           <input class="form-control" type="text" id="search" placeholder="Search by title">
+        </div>
+        <div>
+          <label class="form-label" for="sort">Sort</label>
+          <select class="form-select" id="sort">
+            <option value="default">Default</option>
+            <option value="desc">Rating ↓</option>
+            <option value="asc">Rating ↑</option>
+          </select>
+        </div>
       </div>
       <div class="row g-4" id="moviestr">
       </div>

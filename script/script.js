@@ -161,7 +161,7 @@ function addFav() {
   document.getElementById("favorites-list").addEventListener("click", function (e) {
     if (e.target.classList.contains("remove-fav")) {
       toggleFav(Number(e.target.dataset.id));
-      renderMovies(movies);
+      updateMovies();
     }
   });
 }
@@ -216,6 +216,29 @@ function filterMovies(query) {
   });
 }
 
+function sortMovies(list, order) {
+  const sorted = list.slice();
+
+  if (order === "desc") {
+    sorted.sort(function (a, b) {
+      return b.rating - a.rating;
+    });
+  }
+  if (order === "asc") {
+    sorted.sort(function (a, b) {
+      return a.rating - b.rating;
+    });
+  }
+
+  return sorted;
+}
+
+function updateMovies() {
+  const query = document.getElementById("search").value;
+  const order = document.getElementById("sort").value;
+  renderMovies(sortMovies(filterMovies(query), order));
+}
+
 function setTheme(theme) {
   document.documentElement.setAttribute("data-bs-theme", theme);
   localStorage.setItem("theme", theme);
@@ -245,9 +268,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("moviestr")) {
     renderMovies(movies);
 
-    document.getElementById("search").addEventListener("input", function (e) {
-      renderMovies(filterMovies(e.target.value));
-    });
+    document.getElementById("search").addEventListener("input", updateMovies);
+    document.getElementById("sort").addEventListener("change", updateMovies);
 
     addFav();
     renderFavorites();
