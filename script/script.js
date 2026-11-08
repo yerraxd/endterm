@@ -48,6 +48,76 @@ const movies = [
         director: "Christopher Nolan",
         runtime: 169,
         image: "images/Interstellar.jpg"
+    },
+    {
+        id: 6,
+        title: "Inception",
+        year: 2010,
+        rating: 8.8,
+        genre: "Sci-Fi",
+        director: "Christopher Nolan",
+        runtime: 148,
+        image: "images/inception.jpg"
+    },
+    {
+        id: 8,
+        title: "Parasite",
+        year: 2019,
+        rating: 8.5,
+        genre: "Thriller",
+        director: "Bong Joon-ho",
+        runtime: 132,
+        image: "images/parasite.jpg"
+    },
+    {
+        id: 9,
+        title: "Joker",
+        year: 2019,
+        rating: 8.4,
+        genre: "Drama",
+        director: "Todd Phillips",
+        runtime: 122,
+        image: "images/Joker.jpg"
+    },
+    {
+        id: 10,
+        title: "Top Gun: Maverick",
+        year: 2022,
+        rating: 8.2,
+        genre: "Action",
+        director: "Joseph Kosinski",
+        runtime: 130,
+        image: "images/Top_Gun_Maverick.jpg"
+    },
+        {
+        id: 11,
+        title: "Gladiator",
+        year: 2000,
+        rating: 8.5,
+        genre: "Action",
+        director: "Ridley Scott",
+        runtime: 155,
+        image: "images/Gladiator.jpg"
+    },
+    {
+        id: 12,
+        title: "The Matrix",
+        year: 1999,
+        rating: 8.7,
+        genre: "Sci-Fi",
+        director: "Lana Wachowski, Lilly Wachowski",
+        runtime: 136,
+        image: "images/The_Matrix.jpg"
+    },
+    {
+        id: 13,
+        title: "Fight Club",
+        year: 1999,
+        rating: 8.8,
+        genre: "Drama",
+        director: "David Fincher",
+        runtime: 139,
+        image: "images/Fight_Club.jpg"
     }
 ];
 
@@ -111,6 +181,66 @@ const series = [
         creator: "Baran bo Odar",
         seasons: 3,
         image: "images/Dark.jpg"
+    },
+    {
+        id: 7,
+        title: "The Witcher",
+        year: 2019,
+        rating: 8.0,
+        genre: "Fantasy",
+        creator: "Lauren Schmidt Hissrich",
+        seasons: 4,
+        image: "images/the-witcher.png"
+    },
+    {
+        id: 8,
+        title: "Wednesday",
+        year: 2022,
+        rating: 8.1,
+        genre: "Fantasy",
+        creator: "Alfred Gough, Miles Millar",
+        seasons: 2,
+        image: "images/wednesday-s.png"
+    },
+        {
+        id: 9,
+        title: "Chernobyl",
+        year: 2019,
+        rating: 9.3,
+        genre: "Drama",
+        creator: "Craig Mazin",
+        seasons: 1,
+        image: "images/Chernobyl.jpg"
+    },
+    {
+        id: 10,
+        title: "Black Mirror",
+        year: 2011,
+        rating: 8.7,
+        genre: "Sci-Fi",
+        creator: "Charlie Brooker",
+        seasons: 7,
+        image: "images/Black_Mirror.jpg"
+    },
+    {
+        id: 11,
+        title: "Sherlock",
+        year: 2010,
+        rating: 9.1,
+        genre: "Mystery",
+        creator: "Mark Gatiss, Steven Moffat",
+        seasons: 4,
+        image: "images/Sherlock.jpg"
+    },
+    {
+        id: 12,
+        title: "Friends",
+        year: 1994,
+        rating: 8.9,
+        genre: "Comedy",
+        creator: "David Crane, Marta Kauffman",
+        seasons: 10,
+        image: "images/Friends.jpg"
     }
 ];
 
