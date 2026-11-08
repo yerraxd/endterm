@@ -330,24 +330,6 @@ a:hover {
     margin-top: 15px;
 }
 
-<<<<<<< HEAD
-.movie-card,
-.series-card,
-.show-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.movie-card:hover,
-.series-card:hover,
-.show-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    position: relative;
-    z-index: 2;
-}
-
-=======
->>>>>>> 4a89de0 (Replace CSS hover with jQuery animation)
 @media (max-width: 991.98px) {
     .navbar-nav .nav-link {
         padding: 10px 0;
