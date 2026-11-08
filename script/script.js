@@ -232,6 +232,14 @@ function sortMovies(list, order) {
 
   return sorted;
 }
+function filterSeries(genre) {
+  if (genre === "all") {
+    return series;
+  }
+  return series.filter(function (serie) {
+    return serie.genre === genre;
+  });
+}
 
 function updateMovies() {
   const query = document.getElementById("search").value;
@@ -277,6 +285,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (document.getElementById("seriesl")) {
     renderSeries(series);
+
+    document.getElementById("genre").addEventListener("change", function (e) {
+      renderSeries(filterSeries(e.target.value));
+    });
   }
 });
 

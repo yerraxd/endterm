@@ -403,3 +403,6 @@ a:hover {
     border-color: var(--accent);
     box-shadow: none;
 }
+.genre-filter {
+    max-width: 240px;
+}
