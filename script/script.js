@@ -52,7 +52,6 @@ function addFav() {
     });
 }
 
-// Returns a new array of movies whose title contains the search text
 function renderMovies(list) {
     const container = document.getElementById("moviestr");
     container.innerHTML = "";
@@ -96,6 +95,8 @@ function renderSeries(list) {
     });
 }
 
+
+// Returns a new array of movies whose title contains the search text
 function filterMovies(query) {
     const lowerQuery = query.toLowerCase();
     return movies.filter(function (movie) {
@@ -135,6 +136,7 @@ function updateMovies() {
     renderMovies(sortMovies(filterMovies(query), order));
 }
 
+// Switches the Bootstrap theme and saves the choice in localStorage
 function setTheme(theme) {
     document.documentElement.setAttribute("data-bs-theme", theme);
     localStorage.setItem("theme", theme);
@@ -208,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
             name.classList.remove("is-invalid");
         }
 
+        // Simple email format check: text@text.text
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email.value.trim())) {
